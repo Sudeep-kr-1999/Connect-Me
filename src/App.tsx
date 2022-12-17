@@ -6,9 +6,9 @@ import TopBar from './components/TopBar/TopBar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App relative flex-col m-0 p-0 items-center">
       <TopBar/>
-      <div className="parent-container">
+      <div className="parent-container relative flex">
           <Navigation/>
           <ChatList/>
           <ChatBox/>
