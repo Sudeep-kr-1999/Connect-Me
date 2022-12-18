@@ -30,4 +30,12 @@ export const DemoUserData: {
     message: "hello Sudeep to the connect me",
     time: "12:00 AM",
   },
+  {
+    firstName: "Rajib",
+    middleName: "Rosan",
+    lastName: "Behera",
+    avatarpath: "",
+    message: "hello Rajib to the connect me",
+    time: "12:00 AM",
+  },
 ];
