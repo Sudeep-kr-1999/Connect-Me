@@ -6,7 +6,7 @@ type Props = {};
 
 export default function ChatList({}: Props) {
   return (
-    <div className="chatlist-menu relative flex flex-col basis-[20%] h-[55em] shadow-md">
+    <div className="chatlist-menu relative flex flex-col basis-[20%] h-auto shadow-md">
       <div className="chat-bar relative flex w-full">
         <div className="chat-label-container relative flex">
           <span className="chat-label relative block text-xl italic text-black font-bold m-5">

@@ -4,11 +4,14 @@ import Avatar from "@mui/material/Avatar";
 import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
 import ScreenShareRoundedIcon from "@mui/icons-material/ScreenShareRounded";
+import AddLinkTwoToneIcon from "@mui/icons-material/AddLinkTwoTone";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import EmojiEmotionsOutlinedIcon from "@mui/icons-material/EmojiEmotionsOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import TextField from "@mui/material/TextField";
+import AdminMessageBox from "../AdminMessageBox/AdminMessageBox";
+import OtherUserMessageBox from "../OtherUserMessageBox/OtherUserMessageBox";
 
 type Props = {};
 
@@ -44,7 +47,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function ChatBox({}: Props) {
   return (
-    <div className="chat-menu relative flex flex-col flex-1 h-[55em] bg-slate-50">
+    <div className="chat-menu relative flex flex-col flex-1 h-[56em] bg-slate-50">
       {/* top section  */}
       <div className="topSection relative flex justify-between p-1 px-4 items-center shadow-md bg-white">
         <div className="top-left relative flex items-center">
@@ -96,8 +99,26 @@ export default function ChatBox({}: Props) {
       </div>
 
       {/* middle message section  */}
-      <div className="message-section relative flex flex-1 items-center justify-center">
-        Messages here
+      <div className="message-section relative flex flex-1 flex-col p-4 overflow-y-scroll">
+        {/* if message from admin then in the right  */}
+        <AdminMessageBox />
+        <AdminMessageBox />
+        {/* if message from other user then in the left  */}
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
+        <AdminMessageBox />
+        <OtherUserMessageBox />
       </div>
       {/* lower section  */}
       <div className="lower-section relative flex basis-16 items-center justify-center px-10">
@@ -116,6 +137,9 @@ export default function ChatBox({}: Props) {
           <div className="options-container relative flex">
             <span className="emoji-icon relative block m-2">
               <EmojiEmotionsOutlinedIcon />
+            </span>
+            <span className="attachfile-icon relative block m-2">
+              <AddLinkTwoToneIcon />
             </span>
             <span className="misc-options-icon relative block m-2">
               <AddOutlinedIcon />
