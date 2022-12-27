@@ -47,7 +47,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function ChatBox({}: Props) {
   return (
-    <div className="chat-menu relative flex flex-col flex-1 h-[56em]">
+    <div className="chat-menu relative flex flex-col flex-1 h-[55em]">
       {/* top section  */}
       <div className="topSection relative flex justify-between p-1 px-4 items-center shadow-md bg-white">
         <div className="top-left relative flex items-center">
@@ -101,6 +101,8 @@ export default function ChatBox({}: Props) {
       {/* middle message section  */}
       <div className="message-section relative flex flex-1 flex-col p-4 overflow-y-scroll">
         {/* if message from admin then in the right  */}
+        <AdminMessageBox />
+        <OtherUserMessageBox />
         <AdminMessageBox />
         <OtherUserMessageBox />
       </div>

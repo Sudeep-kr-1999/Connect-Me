@@ -33,11 +33,25 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function AdminMessageBox({}: Props) {
   return (
-    <div className="admin-message-box relative flex h-fit m-2 p-2 justify-end items-center">
-      <span className="admin-message relative block p-3 m-1 rounded-md bg-white drop-shadow-md font-medium">
-        admin message
-      </span>
-      <span className="admin-avatar relative block m-1">
+    <div className="admin-message-box relative flex h-fit m-2 p-2 justify-end items-start">
+      <div className="admin-message relative flex flex-col p-4 m-2 rounded-md bg-white drop-shadow-md max-w-[50%]">
+        <span className="admin-user-name relative block text-left">admin</span>
+        <span className="admin-message relative block text-lg font-medium text-left">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+          obcaecati, tempore maxime inventore aspernatur veniam numquam impedit
+          dolore esse velit distinctio asperiores molestias veritatis nesciunt
+          voluptate! Magni, cupiditate sit. Similique fugit repellendus maxime
+          rem velit quaerat reiciendis eos qui dolor quos natus cum, sit
+          consequatur!
+        </span>
+        <span className="admin-user-time relative block text-right text-[0.8rem]">
+          18:00 PM
+        </span>
+        <span className="seen-status relative block text-right text-[0.8rem]">
+          seen
+        </span>
+      </div>
+      <span className="admin-avatar relative block m-2 mt-4">
         <StyledBadge
           overlap="circular"
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
