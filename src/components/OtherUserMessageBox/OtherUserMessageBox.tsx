@@ -33,10 +33,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function OtherUserMessageBox({}: Props) {
   return (
-    <div className="otheruser-message-box relative flex h-fit m-2 p-2 justify-end items-center ">
-      <span className="other-message relative block p-2 m-1 rounded-md">
-        other message
-      </span>
+    <div className="otheruser-message-box relative flex h-fit m-2 p-2 justify-start items-center ">
       <span className="otheruser-avatar relative block m-1">
         <StyledBadge
           overlap="circular"
@@ -45,6 +42,9 @@ export default function OtherUserMessageBox({}: Props) {
         >
           <Avatar alt="Sudeep Kumar" src="" className="drop-shadow-lg"></Avatar>
         </StyledBadge>
+      </span>
+      <span className="other-message relative block p-3 m-1 rounded-md bg-white drop-shadow-md font-medium">
+        other message
       </span>
     </div>
   );

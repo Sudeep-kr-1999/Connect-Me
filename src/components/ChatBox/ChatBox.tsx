@@ -47,7 +47,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function ChatBox({}: Props) {
   return (
-    <div className="chat-menu relative flex flex-col flex-1 h-[56em] bg-slate-50">
+    <div className="chat-menu relative flex flex-col flex-1 h-[56em]">
       {/* top section  */}
       <div className="topSection relative flex justify-between p-1 px-4 items-center shadow-md bg-white">
         <div className="top-left relative flex items-center">
@@ -102,22 +102,6 @@ export default function ChatBox({}: Props) {
       <div className="message-section relative flex flex-1 flex-col p-4 overflow-y-scroll">
         {/* if message from admin then in the right  */}
         <AdminMessageBox />
-        <AdminMessageBox />
-        {/* if message from other user then in the left  */}
-        <OtherUserMessageBox />
-        <AdminMessageBox />
-        <OtherUserMessageBox />
-        <AdminMessageBox />
-        <OtherUserMessageBox />
-        <AdminMessageBox />
-        <OtherUserMessageBox />
-        <AdminMessageBox />
-        <OtherUserMessageBox />
-        <AdminMessageBox />
-        <OtherUserMessageBox />
-        <AdminMessageBox />
-        <OtherUserMessageBox />
-        <AdminMessageBox />
         <OtherUserMessageBox />
       </div>
       {/* lower section  */}
@@ -131,10 +115,11 @@ export default function ChatBox({}: Props) {
               fullWidth
               placeholder="Type a Message"
               multiline
+              maxRows={10}
               InputProps={{ disableUnderline: true }}
             />
           </div>
-          <div className="options-container relative flex">
+          <div className="options-container relative self-end justify-self-center flex pb-2">
             <span className="emoji-icon relative block m-2">
               <EmojiEmotionsOutlinedIcon />
             </span>
@@ -146,7 +131,7 @@ export default function ChatBox({}: Props) {
             </span>
           </div>
         </div>
-        <span className="send-button-container relative block m-2">
+        <span className="send-button-container relative block m-2 self-end justify-self-center pb-4">
           <SendOutlinedIcon />
         </span>
       </div>

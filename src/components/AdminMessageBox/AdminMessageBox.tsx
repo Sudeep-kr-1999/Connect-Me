@@ -33,7 +33,10 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function AdminMessageBox({}: Props) {
   return (
-    <div className="admin-message-box relative flex h-fit m-2 p-2 justify-start items-center">
+    <div className="admin-message-box relative flex h-fit m-2 p-2 justify-end items-center">
+      <span className="admin-message relative block p-3 m-1 rounded-md bg-white drop-shadow-md font-medium">
+        admin message
+      </span>
       <span className="admin-avatar relative block m-1">
         <StyledBadge
           overlap="circular"
@@ -42,9 +45,6 @@ export default function AdminMessageBox({}: Props) {
         >
           <Avatar alt="Sudeep Kumar" src="" className="drop-shadow-lg"></Avatar>
         </StyledBadge>
-      </span>
-      <span className="admin-message relative block p-2 m-1 rounded-md">
-        admin message
       </span>
     </div>
   );
